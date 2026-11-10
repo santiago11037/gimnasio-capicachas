@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gimnasio CapiCachas</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="img/logo.webp" alt="logo del Gimnasio CapiCachas">
+        <h1> Gimnasio CapiCachas</h1>
+        <p> conviertete en un superheroe con nuestros entrenamientos</p>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#planes">Planes</a></li>
+                <li><a href="#reservas">Reservas</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#preguntas">Preguntas</a></li>
+                <li><a href="#unirse">Suscríbete ya</a></li>
+                <li><a href="#contacto">Contáctanos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+         <section id="inicio">
+            <h1>Gimnasio CapiCachas</h1>
+            <p>Conviértete en un superhéroe con nuestros entrenamientos</p>
+            <a href="#unirse">¡Quiero empezar!</a>
+        </section>
+         <section id="planes">
+            <h2>Disfruta con comodidad en nuestras instalaciones</h2>
+            <p>Planes desde un módico precio hasta entrenamientos intensivos</p>
+
+            <article>
+                <h3>Plan Escuálido</h3>
+                <p>$50.000 / mes</p>
+                <ul>
+                    <li>Acceso a zona de máquinas</li>
+                    <li>Horario de 6:00 a. m. a 12:00 m.</li>
+                </ul>
+                <a href="#unirse">Elegir plan</a>
+            </article>
+
+            <article>
+                <h3>Plan Voy en Serio</h3>
+                <p>$90.000 / mes</p>
+                <ul>
+                    <li>Acceso a todas las zonas</li>
+                    <li>Clases grupales incluidas</li>
+                    <li>Horario completo</li>
+                </ul>
+                <a href="#unirse">Elegir plan</a>
+            </article>
+
+            <article>
+                <h3>Plan El Superhéroe</h3>
+                <p>$140.000 / mes</p>
+                <ul>
+                    <li>Todo lo anterior</li>
+                    <li>Entrenador personal</li>
+                    <li>Plan de nutrición</li>
+                </ul>
+                <a href="#unirse">Elegir plan</a>
+            </article>
+        </section>
+          <section id="reservas">
+            <h2>Reserva tu clase</h2>
+            <p>Asegura tu cupo antes de llegar</p>
+
+            <article>
+                <h3>Yoga</h3>
+                <p>Lunes y miércoles, 6:00 p. m.</p>
+                <p>Cupos disponibles:<span class="cupos"> 8</span></p>
+                <button type="button" class="btn-reservar">Reservar</button>
+            </article>
+
+            <article>
+                <h3>Spinning</h3>
+                <p>Martes y jueves, 7:00 a. m.</p>
+                <p>Cupos disponibles:<span class="cupos"> 3</span></p>
+                <button type="button" class="btn-reservar">Reservar</button>
+            </article>
+
+            <article>
+                <h3>Boxeo funcional</h3>
+                <p>Viernes, 6:30 p. m.</p>
+                <p>Cupos disponibles:<span class="cupos"> 10</span></p>
+                <button type="button" class="btn-reservar">Reservar</button>
+            </article>
+        </section>
+        <section id="galeria">
+            <h2>Conoce nuestras instalaciones</h2>
+
+            <figure>
+                <img src="img/sala-maquinas.jpg" alt="Zona de máquinas del gimnasio" >
+                <figcaption>Zona de máquinas</figcaption>
+            </figure>
+
+            <figure>
+                <img src="img/clase-grupal.jpg" alt="Clase grupal en el gimnasio" >
+                <figcaption>Clases grupales</figcaption>
+            </figure>
+
+            <figure>
+                <img src="img/entrenadores.jpg" alt="Equipo de entrenadores">
+                <figcaption>Nuestros entrenadores</figcaption>
+            </figure>
+        </section>
+         <section id="preguntas">
+            <h2>Preguntas frecuentes</h2>
+
+            <details>
+                <summary>¿Necesito experiencia para inscribirme?</summary>
+                <p>No. Nuestros entrenadores te orientan desde el primer día.</p>
+            </details>
+
+            <details>
+                <summary>¿Puedo cancelar mi plan?</summary>
+                <p>Sí, puedes cancelarlo en cualquier momento avisando con 5 días de anticipación.</p>
+            </details>
+
+            <details>
+                <summary>¿Qué debo llevar a mi primera clase?</summary>
+                <p>Ropa cómoda, una toalla pequeña y una botella de agua.</p>
+            </details>
+        </section>
+         <section id="unirse">
+            <h2>Diversas maneras en las que puedes integrarte</h2>
+
+            <form id="form-inscripcion" action="#" method="post">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" required>
+
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono">
+
+                <label for="plan">Plan de interés</label>
+                <select id="plan" name="plan">
+                    <option value="escualido">Plan Escuálido</option>
+                    <option value="serio">Plan Voy en Serio</option>
+                    <option value="superheroe">Plan El Superhéroe</option>
+                </select>
+                  <label for="objetivo">Tu objetivo</label>
+                <select id="objetivo" name="objetivo">
+                    <option value="bajar">Bajar de peso</option>
+                    <option value="musculo">Ganar músculo</option>
+                    <option value="salud">Mejorar mi salud</option>
+                </select>
+
+                <button type="submit">Suscribirme</button>
+                <p id="mensaje-form" role="status"></p>
+            </form>
+        </section>
+         <section id="contacto">
+            <h2>Contáctanos</h2>
+            <p>Correo: estoesbroma@ejercicio.md</p>
+            <p>Teléfono: 303030303</p>
+            <p>Horario: lunes a sábado, 6:00 a. m. a 9:00 p. m.</p>
+        </section>                
+    </main>
+     <footer>
+        <p>&copy; 2026 Gimnasio CapiCachas. Todos los derechos reservados.</p>
+        <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">WhatsApp</a></li>
+        </ul>
+    </footer>
+
+</body>
+</html>

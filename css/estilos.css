@@ -1,0 +1,377 @@
+:root {
+    --fondo: #121212;
+    --superficie: #1e1e1e;
+    --texto: #f2f2f2;
+    --texto-suave: #b5b5b5;
+    --acento: #ffb400;      
+    --acento-oscuro: #e09a00;
+    --radio: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;   
+    scroll-padding-top: 5rem;  
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    background-color: var(--fondo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--acento);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--superficie);
+    padding: 0.75rem 1rem;
+    display: flex;
+    flex-direction: column;     
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 2px solid var(--acento);
+}
+
+header img {
+    width: 60px;
+    height: 60px;              
+    object-fit: contain;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;            
+    justify-content: center;
+    gap: 0.25rem 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--texto);
+    font-size: 0.9rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+nav a:hover {
+    background-color: var(--acento);
+    color: #000;
+}
+
+main section {
+    padding: 3rem 1rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: var(--acento);
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+section > p {
+    text-align: center;
+    color: var(--texto-suave);
+    margin-bottom: 1.5rem;
+}
+
+#inicio {
+    max-width: none;            
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    background: linear-gradient(135deg, #1a1a1a 0%, #3a2c00 100%);
+}
+
+#inicio h1 {
+    font-size: 2.2rem;
+    color: var(--acento);
+}
+
+#inicio p {
+    font-size: 1.1rem;
+    max-width: 500px;
+}
+
+#inicio a,
+article a,
+button {
+    display: inline-block;
+    background-color: var(--acento);
+    color: #000;
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 0.7rem 1.4rem;
+    border: none;
+    border-radius: var(--radio);
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+#inicio a:hover,
+article a:hover,
+button:hover {
+    background-color: var(--acento-oscuro);
+    transform: translateY(-2px);
+}
+
+#planes,
+#reservas {
+    display: grid;
+    grid-template-columns: 1fr;  
+    gap: 1.5rem;
+}
+
+#planes h2, #planes > p,
+#reservas h2, #reservas > p {
+    grid-column: 1 / -1;
+}
+
+article {
+    background-color: var(--superficie);
+    border-radius: var(--radio);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    border: 1px solid #333;
+    transition: transform 0.25s, border-color 0.25s;
+}
+
+article:hover {
+    transform: translateY(-6px);
+    border-color: var(--acento);
+}
+
+article h3 {
+    color: var(--acento);
+}
+
+article ul {
+    list-style: none;
+    flex-grow: 1;                
+}
+
+article li::before {
+    content: "✔ ";
+    color: var(--acento);
+}
+
+#planes article > p:first-of-type {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#galeria {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+#galeria h2 {
+    grid-column: 1 / -1;
+}
+
+figure {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radio);
+}
+
+figure img {
+    width: 100%;
+    height: 220px;               
+    object-fit: cover;            
+    transition: transform 0.4s;
+}
+
+figure:hover img {
+    transform: scale(1.08);
+}
+
+figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.65);
+    text-align: center;
+}
+
+#preguntas {
+    max-width: 700px;
+}
+
+details {
+    background-color: var(--superficie);
+    border-radius: var(--radio);
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    border: 1px solid #333;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+details[open] {
+    border-color: var(--acento);
+}
+
+details p {
+    margin-top: 0.75rem;
+    color: var(--texto-suave);
+}
+
+form {
+    max-width: 500px;
+    margin: 1.5rem auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: var(--superficie);
+    padding: 1.5rem;
+    border-radius: var(--radio);
+}
+
+label {
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+input,
+select {
+    padding: 0.7rem;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background-color: #2a2a2a;
+    color: var(--texto);
+    font-size: 1rem;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid var(--acento);
+}
+
+form button {
+    margin-top: 1rem;
+}
+
+#contacto {
+    text-align: center;
+}
+
+#contacto p {
+    margin-bottom: 0.25rem;
+    color: var(--texto);
+}
+
+footer {
+    background-color: var(--superficie);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    border-top: 2px solid var(--acento);
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 0.75rem;
+}
+
+@media (min-width: 768px) {
+    header {
+        flex-direction: row;         
+        justify-content: space-between;
+        padding: 0.75rem 2rem;
+    }
+
+    #inicio h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    #planes,
+    #reservas {
+        grid-template-columns: repeat(2, 1fr);  
+    }
+
+    #galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (min-width: 1024px) {
+    nav a {
+        font-size: 1rem;
+    }
+
+    #inicio h1 {
+        font-size: 4rem;
+    }
+
+    #planes,
+    #reservas {
+        grid-template-columns: repeat(3, 1fr);   
+    }
+
+    #galeria {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    button.reservada {
+    background-color: #2e7d32;
+    color: #fff;
+}
+
+button:disabled {
+    background-color: #555;
+    color: #aaa;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+.mensaje-exito {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    background-color: #2e7d32;
+    color: #fff;
+    text-align: center;
+}
+}
